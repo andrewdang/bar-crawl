@@ -22,6 +22,10 @@ get('/new_character') do
   erb(:new_character)
 end
 
+get('/instructions') do
+  erb(:instructions)
+end
+
 
 post('/new_character') do
   name = params.fetch("name")
@@ -162,7 +166,7 @@ patch('/random_events/coffee_shop') do
 
 end
 
-########################
+########### RESULTS #############
 
 get('/win_stop') do
   @kyle = false
@@ -178,29 +182,4 @@ get('/lose') do
   @game = Game.all.last
   @lose_condition = @game.lose
   erb(:lose)
-end
-
-get('/instructions') do
-  erb(:instructions)
-end
-
-get('/map/:id') do
-  turn = params.fetch('id').to_i
-  if turn > 17
-      @turn = 17
-  else
-    @turn = turn
-  end
-  erb(:map)
-end
-
-get('/map/') do
-  game = Game.all.last
-  turn = game.stop_id
-  if turn > 17
-      @turn = 17
-  else
-    @turn = turn
-  end
-  erb(:map)
 end

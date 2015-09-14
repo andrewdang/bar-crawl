@@ -10,6 +10,7 @@
   <div class="col-md-4">
       <h4><%= @game.name %></h4>
       <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
+
       <div class="stats-box">
         <div class="col-xs-6 stat-labels">
           <p>Happiness: </p>
@@ -25,13 +26,19 @@
   </div>
 
   <div class="col-md-8">
-    <div class="turn-content">
+    <div class="turn-event">
+
+      <!-- EVENTS -->
+    <div class="random-event">
       <% if @coffee == true  %>
-        <p ><%= @game.name %> <%= @event.coffee_shop %></p>
+        <p><%= @game.name %> <%= @event.coffee_shop %></p>
       <% else %>
         <p><%= @game.name %> <%= @event.bar %></p>
       <% end %>
+    </div>
 
+      <!-- STATS -->
+    <div class="stat-results">
       <% if @event.change_energy != nil %>
         <h4><%= @event.change_energy %> Energy</h4></span>
       <% end %>
@@ -42,7 +49,7 @@
 
       <% if @event.change_money != nil %>
         <h4><%= @event.change_money %> Dollars</h4></span>
-      <% end %>
+      <% end %></div>
     </div>
 
     <a href="/turn/<%= @game.stop_id %>" class="btn">Continue</a>

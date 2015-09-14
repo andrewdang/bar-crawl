@@ -7,6 +7,14 @@ body, a,
   font-family: 'Press Start 2P', cursive;
 }
 
+.logo {
+  font-size: 6em;
+}
+
+.btn-lg {
+  font-size: 36px;
+}
+
 .btn:hover,
 .form-btn:hover {
   color: #008000;
@@ -26,6 +34,11 @@ body, a,
 .event .col-md-4 {
   min-height: 300px;
 }
+
+.sm-main-imgs {
+  display: none;
+}
+
 
 /****************** INDEX/ABOUT/NEWGAME/INSTRUCTIONS ********************/
 
@@ -80,6 +93,11 @@ body, a,
   margin-bottom: 1.5em;
 }
 
+.form-input-text {
+  color: black;
+  font-size: 18px;
+}
+
 .crazy-maniacal-running {
   width:100px;
   height:200px;
@@ -121,9 +139,9 @@ body, a,
   padding: 0;
 }
 
-.turn h4 {
+/*.turn h4 {
   margin-bottom: 25px;
-}
+}*/
 
 .col-md-offset-2 {
   margin-top: 20px;
@@ -143,6 +161,7 @@ body, a,
   border-bottom: 3px solid white;
   padding: 5px;
 }
+
 
 .stats-box {
   text-align: left;
@@ -174,8 +193,11 @@ h5 {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   font-size: 1.1em;
-
 }
+
+/*.status-bar {
+  font-size: 2em;
+}*/
 
 .status strong {
   font-size: 20px;
@@ -191,11 +213,13 @@ h5 {
 
 .event .btn {
   font-size: 14px;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
-.turn-content {
-  margin-top: 20px;
+
+.stat-results {
+  margin-top: 30px;
+  text-align: center;
 }
 
 
@@ -204,59 +228,11 @@ h5 {
 .kyle {
   text-align: left;
   padding: 0 40px 40px 40px;
-}
-
-/*.beer-button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.beer-mug {
-  margin-left: auto;
-  margin-right: -20%;
-}*/
-
-/*.coffee-cup {
-  margin-left: auto;
-  margin-right: -10%;
-}*/
-
-/*.main {
-  text-align: center;
-  border: 5px solid white;
-  margin-top: 5%;
-  margin-bottom: 0%;
-  padding-left: 0px;
-  padding-right: 0px;
-}*/
-
-.logo {
-  font-size: 6em;
-}
-
-.btn-lg {
-  font-size: 36px;
-}
-
-.sm-main-imgs {
-  display: none;
+  line-height: .95em;
 }
 
 
-.box {
-  border: 2px solid white;
-  margin: 30px;
-  padding: 20px;
-}
 
-.form-input-text {
-  color: black;
-  font-size: 18px;
-}
-
-.form-label-text {
-  font-size: 24px;
-}
 
 .form-btn {
   color: #FFFFFF;
@@ -265,9 +241,7 @@ h5 {
   font-size: 18px;
 }
 
-.status-bar {
-  font-size: 2em;
-}
+
 
 h4 {
   line-height: 1.5;
@@ -276,18 +250,11 @@ h3 {
   line-height: 1.5;
 }
 
-.kyle {
-  line-height: .95em;
-}
 .avatar {
   margin-bottom: 3px;
 }
 
-
-.turn-event .col-md-8 {
-  margin-top: 1px;
-}
-
+/* stats color */
 .turn-content .positive-status {
   color: #06de00;
 }
@@ -369,7 +336,6 @@ h3 {
   #beer, #coffee {
     font-size: 10px;
   }
-
 }
 
 
@@ -442,5 +408,10 @@ h3 {
   .stats,
   .stat-labels {
     padding: 0 40px;
+  }
+
+  .turn-event {
+    width: 18em;
+    padding-bottom: 1em;
   }
 }
