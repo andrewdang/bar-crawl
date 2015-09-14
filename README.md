@@ -4,19 +4,17 @@
 
 ##Description
 
-Inspired by The Oregon Trail, Trail Blazer is a text based adventure game that takes place in Oregon. Visit our game on heroku at:
-
-[**trail blazer game**](http://trail-blazer-game.herokuapp.com)
+Inspired by The Oregon Trail game, Trail Blazer is a text based adventure game that also takes place in Oregon. Visit our game on heroku at:[**Trail Blazer Game**](http://trail-blazer-game.herokuapp.com)
 
 ##Setup
 
-Run `git clone https://github.com/christhub/bar_crawl`
-Run `bundle` in main directory
-Run `rake db:create`
-Run `rake db:migrate`
-Run `rake db:test:prepare`
-Run `ruby app.rb`
-Open [localhost:4567](https://localhost:4567) in browser and be sure to play in full screen.
+* Run `git clone https://github.com/christhub/bar_crawl`
+* Run `bundle` in main directory
+* Run `rake db:create`
+* Run `rake db:migrate`
+* Run `rake db:test:prepare`
+* Run `ruby app.rb`
+* Open [localhost:4567](https://localhost:4567) in browser and be sure to play in full screen.
 
 Read through the instructions.
 
