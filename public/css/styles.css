@@ -7,10 +7,6 @@ body, a,
   font-family: 'Press Start 2P', cursive;
 }
 
-.logo {
-  font-size: 6em;
-}
-
 .btn-lg {
   font-size: 36px;
 }
@@ -39,19 +35,12 @@ body, a,
   display: none;
 }
 
-
-/****************** INDEX/ABOUT/NEWGAME/INSTRUCTIONS ********************/
-
 .index, .about {
   width: 100%;
   text-align: center;
   border: solid 12px #fff;
   padding: 4em 0;
   margin-top: 5%;
-}
-
-.about h1 {
-  margin-top: 1em;
 }
 
 .prologue-text,
@@ -64,6 +53,22 @@ body, a,
 }
 
 
+/****************** ABOUT/NEWGAME/INSTRUCTIONS ********************/
+
+.logo {
+  font-size: 6em;
+}
+
+/* about */
+.about h1 {
+  margin-top: 1em;
+}
+
+.about img {
+  width: 50%;
+}
+
+/* new character form */
 .new-char input {
   line-height: 50px;
   padding-bottom: 8px;
@@ -77,6 +82,13 @@ body, a,
   font-size: 24px;
 }
 
+.form-input-text {
+  color: black;
+  font-size: 18px;
+}
+
+
+/* instructions */
 .cityscape {
   width: 90%;
 }
@@ -91,11 +103,6 @@ body, a,
 
 .instructions-text h4 {
   margin-bottom: 1.5em;
-}
-
-.form-input-text {
-  color: black;
-  font-size: 18px;
 }
 
 .crazy-maniacal-running {
@@ -134,56 +141,28 @@ body, a,
   border-right: 4px solid white;
 }
 
-.turn,
-.event {
-  padding: 0;
-}
-
-/*.turn h4 {
-  margin-bottom: 25px;
-}*/
-
-.col-md-offset-2 {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
 .turn .col-md-8,
 .turn .col-xs-2 {
   padding-left: 0;
   padding-right: 0;
 }
 
+.turn,
+.event {
+  padding: 0;
+}
+
+.col-md-offset-2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* status bar */
 .status {
-  /*float: center;*/
   text-align: center;
   font-weight: bold;
   border-bottom: 3px solid white;
   padding: 5px;
-}
-
-
-.stats-box {
-  text-align: left;
-  font-size: 12px;
-}
-
-.stats-box,
-.beer, .coffee {
-  font: 12px;
-}
-
-.stats {
-  text-align: right;
-}
-
-#coffee, #beer {
-  padding: 0;
-  font-size: 12px;
-}
-
-h5 {
-  margin-top: 50px;
 }
 
 .green-status-bar {
@@ -195,27 +174,51 @@ h5 {
   font-size: 1.1em;
 }
 
-/*.status-bar {
-  font-size: 2em;
-}*/
-
 .status strong {
   font-size: 20px;
 }
 
 @keyframes blinker {
-    0% {  opacity: 1.0; }
+    0% { opacity: 1.0; }
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }
+
+
+/* character stats */
+.stats-box {
+  text-align: left;
+  font-size: 12px;
+}
+
+#coffee,
+#beer,
+.stats-box {
+  font: 12px;
+}
+
+.stats {
+  text-align: right;
+}
+
+#coffee, #beer {
+  padding: 0;
+}
+
+h5 {
+  margin-top: 50px; /* vertically center align "or" */
+}
+
 
 /****************** EVENT ********************/
 
 .event .btn {
   font-size: 14px;
-  /*margin-top: 20px;*/
 }
 
+.event a {
+  margin-bottom: 20px;
+}
 
 .stat-results {
   margin-top: 30px;
@@ -231,18 +234,6 @@ h5 {
   line-height: .95em;
 }
 
-
-
-
-.form-btn {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 2px solid #ffffff;
-  font-size: 18px;
-}
-
-
-
 h4 {
   line-height: 1.5;
 }
@@ -250,9 +241,6 @@ h3 {
   line-height: 1.5;
 }
 
-.avatar {
-  margin-bottom: 3px;
-}
 
 /* stats color */
 .turn-content .positive-status {
@@ -341,7 +329,7 @@ h3 {
 
 @media screen and (max-width: 600px) {
 
-  /**** general ****/
+  /* general */
   .about h1,
   .intro h1,
   .instructions h1 {
@@ -364,7 +352,7 @@ h3 {
   }
 
 
-  /**** main page ****/
+  /* main page */
   .logo {
     font-size: 3.5em;
   }
@@ -377,18 +365,18 @@ h3 {
     display: block;
   }
 
-  /**** about ****/
+  /* about */
   .about img {
     width: 75%;
   }
 
-  /**** intro ****/
+  /* intro */
   .prologue-text,
   .instructions-text {
     width: 20em;
   }
 
-  /**** new character ****/
+  /* new character */
   .new-char .btn {
     font-size: 14px;
     margin-top: 20px;
@@ -399,12 +387,12 @@ h3 {
     width: 350px;
   }
 
-  /**** instructions ****/
+  /* instructions */
   .instructions .animated {
     display: none;
   }
 
-  /******* turns *******/
+  /* turns */
   .stats,
   .stat-labels {
     padding: 0 40px;
