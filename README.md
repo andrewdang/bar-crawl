@@ -1,43 +1,42 @@
-#trail blazer game
+#Trail Blazer Game
 
-###by andrew dang, clayton easterbrooks, leah klamkin, christian lei
+###by Andrew Dang, Clayton Easterbrooks
+###Leah Klamkin, & Christian Lei
 
 ##Description
 
-It lets you play the trail blazer game! It is inspired by The Oregon Trail. Visit our game on heroku at:
+Inspired by The Oregon Trail, Trail Blazer is a text based adventure game that takes place in Oregon. Visit our game on heroku at:
 
 [**trail blazer game**](http://trail-blazer-game.herokuapp.com)
 
 ##Setup
 
-open terminal
 ```
 git clone https://github.com/christhub/bar_crawl
 ```
 ```
-run bundle
+bundle
 ```
 ```
-run rake db:create
+rake db:create
 ```
 ```
-run rake db:migrate
+rake db:migrate
 ```
 ```
-run rake db:test:prepare
+rake db:test:prepare
 ```
 ```
-run ruby app.rb
+ruby app.rb
 ```
 
-then open your web browser of choice to `localhost:4567`
+Open [localhost:4567](https://localhost:4567) in browser and be sure to play in full screen.
 
-read through the instructions.
+Read through the instructions.
 
 note: game mathematics are not fully functioning.
 
 ##Technologies Used
-
 
 Ruby
 
@@ -49,9 +48,11 @@ Bootstrap
 
 Adobe Photoshop
 
+The World Wide Web
+
 ###Legal
 
-Copyright (c) 2015  Andrew Dang, Clayton Easterbrooks, Leah Klamkin, Christian Lei
+Copyright (c) 2015  Andrew Dang, Clayton Easterbrooks, Leah Klamkin, & Christian Lei
 
 This software is licensed under the MIT license.
 
