@@ -1,7 +1,6 @@
 #Trail Blazer Game
 
-###by Andrew Dang, Clayton Easterbrooks
-###Leah Klamkin, & Christian Lei
+###by Andrew Dang, Clayton Easterbrooks, Leah Klamkin, & Christian Lei
 
 ##Description
 
@@ -11,43 +10,25 @@ Inspired by The Oregon Trail, Trail Blazer is a text based adventure game that t
 
 ##Setup
 
-```
-git clone https://github.com/christhub/bar_crawl
-```
-```
-bundle
-```
-```
-rake db:create
-```
-```
-rake db:migrate
-```
-```
-rake db:test:prepare
-```
-```
-ruby app.rb
-```
-
+Run `git clone https://github.com/christhub/bar_crawl`
+Run `bundle` in main directory
+Run `rake db:create`
+Run `rake db:migrate`
+Run `rake db:test:prepare`
+Run `ruby app.rb`
 Open [localhost:4567](https://localhost:4567) in browser and be sure to play in full screen.
 
 Read through the instructions.
 
-note: game mathematics are not fully functioning.
+note: game mathematics are not fully functioning yet.
 
 ##Technologies Used
 
 Ruby
-
 HTML
-
-CSS
-
+CSS3
 Bootstrap
-
 Adobe Photoshop
-
 The World Wide Web
 
 ###Legal
