@@ -12,6 +12,7 @@ Inspired by The Oregon Trail game, Trail Blazer is a text based adventure game t
 * Run `bundle` in main directory
 * Run `rake db:create`
 * Run `rake db:migrate`
+* Run `rake db:seed`
 * Run `rake db:test:prepare`
 * Run `ruby app.rb`
 * Open [localhost:4567](https://localhost:4567) in browser and be sure to play in full screen.
