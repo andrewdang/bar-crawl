@@ -1,6 +1,6 @@
 #Trail Blazer Game
 
-###by Andrew Dang, Clayton Easterbrooks, Leah Klamkin, & Christian Lei
+####by Andrew Dang, Clayton Easterbrooks, Leah Klamkin, & Christian Lei
 
 ##Description
 
