@@ -5,7 +5,6 @@ Bundler.require(:default)
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
-# require('pry')
 
 get('/') do
   erb(:index)
@@ -27,11 +26,10 @@ end
 post('/new_character') do
   name = params.fetch("name")
   game = Game.create(:name => name, :money => 69.35, :energy => 30, :happiness => 30, :stop_id => 1 )
-  redirect("/animation")
+  redirect("/instructions")
 end
 
 get('/turn/:id') do
-
   @game = Game.all.last
   @turn = @game.stop_id
   bar = Styling.new
@@ -182,8 +180,8 @@ get('/lose') do
   erb(:lose)
 end
 
-get('/animation') do
-  erb(:running_page)
+get('/instructions') do
+  erb(:instructions)
 end
 
 get('/map/:id') do

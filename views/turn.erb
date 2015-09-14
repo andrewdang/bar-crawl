@@ -1,53 +1,64 @@
-<div class="col-md-8 main">
+<div class="col-md-8 index turn">
   <div class="header-block">
     <h1><%= @stop.name %></h1>
   </div>
+
   <div class="status">
     <strong><%=@green_status%></strong>
   </div>
 
-  <div class="col-md-4">
-    <div class="stats-box">
+    <div class="col-md-4">
         <h4><%= @game.name %></h4>
         <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-        <p><span class="energy-level">Energy: <%= @game.energy %>%</span></p>
-        <p><span class='happiness-level'>Happiness: <%= @game.happiness %>%</span></p>
-        <p><span class="money-level">Money: $ <%= @game.money %> </span></p>
-        <p><span class="map-button"><a class="btn btn-small" href="/map/<%= @turn %>">Map</a></span></p>
-
+        <div class="stats-box">
+          <div class="col-xs-6 stat-labels">
+            <p>Happiness: </p>
+            <p>Energy: </p>
+            <p>Money: </p>
+          </div>
+          <div class="col-xs-6 stats">
+            <p><span class='happiness-level'><%= @game.happiness %>%</span></p>
+            <p><span class="energy-level"><%= @game.energy %>%</span></p>
+            <p><span class="money-level">$<%= @game.money %> </span></p>
+          </div>
+        </div>
     </div>
-  </div>
 
-<div class="col-md-8">
-  <div class="turn-content">
+    <div class="col-md-8">
+      <div class="turn-content">
+        <h4>Choose</h4>
 
-    <h4>Choose</h4>
-    <span class="coffee-button col-md-4">
-      <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
-
-          <input type="hidden" name="_method" value="patch">
-            <span class="coffee-cup"><input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="100" height="110" alt="Submit Form"></span>
+        <div class="col-xs-5 coffee">
+          <form id="choose_coffee" action="/random_events/coffee_shop" method="post">
+            <input type="hidden" name="_method" value="patch">
+            <input id="coffee" name="coffee" type="image" src="/img/coffee.png" width="90" height="110" alt="Submit Form">
             <br>
-
-            <label id="coffee">Coffee @ <%= @coffee_shop.name %></label>
-        </form>
-      </span>
-
-      <div class="col-md-4">OR</div>
-
-    <span class="beer-button col-md-4">
-      <form id="choose_beer" action="/random_events/bar" method="post">
-          <input type="hidden" name="_method" value="patch">
-            <span class="beer-mug"><input id="beer-input" name="beer" type="image" src="/img/beer.png" width="100" height="100" alt="Submit Form"></span>
             <br>
-            <label id="beer-label">Beer @ <%= @bar.name %></label>
-        </form>
-      </span>
+            <p>Coffee @ </p>
+            <p id="coffee"><%= @coffee_shop.name %></p>
+          </form>
+        </div>
+
+        <div class="col-xs-2 or">
+          <h5>OR</h5>
+        </div>
+
+        <div class="col-xs-5 beer">
+            <form id="choose_beer" action="/random_events/bar" method="post">
+              <input type="hidden" name="_method" value="patch">
+              <input id="beer-input" name="beer" type="image" src="/img/beer.png" width="90" height="110" alt="Submit Form">
+              <br>
+              <br>
+              <p>Beer @</p>
+              <p id="beer"><%= @bar.name %></p>
+            </form>
+        </div>
+
+      </div>
     </div>
-  </div>
 </div>
 
 
 <div class="img-center">
-  <img class="col-md-offset-2 col-md-8" src="/img/maps/map-<%=@turn%>.png">
+  <img class="col-md-offset-2 col-md-8 map" src="/img/maps/map-<%=@turn%>.png">
 </div>

@@ -1,6 +1,7 @@
-<div class="col-md-8 main loser">
+<div class="col-md-8 index loser">
   <div class="lose">
     <h1>You have died.</h1>
+    <br>
 
     <% if @lose_condition == 0 %>
       <h3>You died from lack of energy. Drink more coffee next time. Oh wait...</h3>
@@ -11,6 +12,7 @@
     <% elsif @lose_condition == 3 %>
       <h3>You were just too sober for a Friday night, and spontaneously gave up the ghost.</h3>
     <% end %>
+    <br>
 
     <a class='btn' href="/">Play again!</a>
   </div>

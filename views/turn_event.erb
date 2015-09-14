@@ -1,45 +1,53 @@
-<div class="col-md-8 main">
+<div class="col-md-8 index event">
   <div class="header-block">
     <h1><%= @stop.name %></h1>
   </div>
+
   <div class="status">
-    <strong><%=@green_status%></strong>
+    <strong><%= @green_status%></strong>
   </div>
 
-<div class="col-md-4">
-  <div class="stats-box">
+  <div class="col-md-4">
       <h4><%= @game.name %></h4>
       <center><div class="avatar"><img src="/img/avatar.png" alt="gravitar"/></div></center><br>
-      <p><span class="energy-level">Energy: <%= @game.energy %>%</span></p>
-      <p><span class='happiness-level'>Happiness: <%= @game.happiness %>%</span></p>
-      <p><span class="money-level">Money: $ <%= @game.money %> </span></p>
-      <p><span class="map-button"><a class="btn btn-small" href="/map/<%= @turn %>">Map</a></span></p>
+      <div class="stats-box">
+        <div class="col-xs-6 stat-labels">
+          <p>Happiness: </p>
+          <p>Energy: </p>
+          <p>Money: </p>
+        </div>
+        <div class="col-xs-6 stats">
+          <p><span class='happiness-level'><%= @game.happiness %>%</span></p>
+          <p><span class="energy-level"><%= @game.energy %>%</span></p>
+          <p><span class="money-level">$<%= @game.money %> </span></p>
+        </div>
+      </div>
   </div>
-</div>
 
+  <div class="col-md-8">
+    <div class="turn-content">
+      <% if @coffee == true  %>
+        <p ><%= @game.name %> <%= @event.coffee_shop %></p>
+      <% else %>
+        <p><%= @game.name %> <%= @event.bar %></p>
+      <% end %>
 
-<div class="turn-content">
-  <% if @coffee == true  %>
-    <h4 ><%= @game.name %> <%= @event.coffee_shop %></h4>
-  <% else %>
-    <h4><%= @game.name %> <%= @event.bar %></h4>
-  <% end %>
+      <% if @event.change_energy != nil %>
+        <h4><%= @event.change_energy %> Energy</h4></span>
+      <% end %>
 
-  <% if @event.change_energy != nil %>
-    <h3><%= @event.change_energy %> Energy</h3></span>
-  <% end %>
+      <% if @event.change_happiness != nil %>
+        <h4><%= @event.change_happiness %> Happiness</h4></span>
+      <% end %>
 
-  <% if @event.change_happiness != nil %>
-    <h3><%= @event.change_happiness %> Happiness</h3></span>
-  <% end %>
+      <% if @event.change_money != nil %>
+        <h4><%= @event.change_money %> Dollars</h4></span>
+      <% end %>
+    </div>
 
-  <% if @event.change_money != nil %>
-    <h3><%= @event.change_money %> Dollars</h3></span>
-  <% end %>
-</div>
+    <a href="/turn/<%= @game.stop_id %>" class="btn">Continue</a>
 
-<a href="/turn/<%= @game.stop_id %>" class="btn-turn-event btn">Continue</a>
-
+  </div>
 </div>
 
 

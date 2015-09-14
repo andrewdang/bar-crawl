@@ -1,11 +1,212 @@
-body {
+/****************** GENERAL ********************/
+
+body, a,
+.new-char .btn {
   background-color: black;
   color: #FFFFFF;
   font-family: 'Press Start 2P', cursive;
 }
 
+.btn:hover,
+.form-btn:hover {
+  color: #008000;
+  border-color: #008000;
+  transition-duration: .2s;
+}
 
-.beer-button {
+.btn {
+  border: 6px solid white;
+  font-size: 18px;
+  border-radius: 0px;
+}
+
+.turn .col-md-4,
+.turn .col-md-8,
+.event .col-md-8,
+.event .col-md-4 {
+  min-height: 300px;
+}
+
+/****************** INDEX/ABOUT/NEWGAME/INSTRUCTIONS ********************/
+
+.index, .about {
+  width: 100%;
+  text-align: center;
+  border: solid 12px #fff;
+  padding: 4em 0;
+  margin-top: 5%;
+}
+
+.about h1 {
+  margin-top: 1em;
+}
+
+.prologue-text,
+.instructions-text,
+.turn-event {
+  width: 40em;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1em 0 3em 0;
+}
+
+
+.new-char input {
+  line-height: 50px;
+  padding-bottom: 8px;
+}
+
+.new-char form {
+  padding-bottom: 4em;
+}
+
+.new-char .btn {
+  font-size: 24px;
+}
+
+.cityscape {
+  width: 90%;
+}
+
+.instructions h1 {
+  margin-top: 1.2em;
+}
+
+.instructions-text {
+  padding: 1em 0 0 0;
+}
+
+.instructions-text h4 {
+  margin-bottom: 1.5em;
+}
+
+.crazy-maniacal-running {
+  width:100px;
+  height:200px;
+  margin: 10%;
+  animation-name: foo;
+  transform: translate3d(100px, 100px, 0px);
+  animation-iteration-count: infinite;
+  clear:
+}
+
+@keyframes foo {
+    0%   {left:0px; top:0px; transform: translate3d(50px, 40px, 0px);}
+    25%  {left:200px; top:0px; transform: translate3d(50px, 50px, 0px);}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
+.bounceInLeft {
+  -webkit-animation: bounceInLeft 1s, bounce 2s, bounceOutRight 3s;
+  -webkit-animation-delay: 0s, 1.5s, 3s;
+}
+
+
+/****************** TURN ********************/
+
+.header-block {
+  border-bottom: 5px solid white;
+  padding: 1em;
+}
+
+.turn .col-md-4,
+.event .col-md-4 {
+  border-right: 4px solid white;
+}
+
+.turn,
+.event {
+  padding: 0;
+}
+
+.turn h4 {
+  margin-bottom: 25px;
+}
+
+.col-md-offset-2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.turn .col-md-8,
+.turn .col-xs-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.status {
+  /*float: center;*/
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 3px solid white;
+  padding: 5px;
+}
+
+.stats-box {
+  text-align: left;
+  font-size: 12px;
+}
+
+.stats-box,
+.beer, .coffee {
+  font: 12px;
+}
+
+.stats {
+  text-align: right;
+}
+
+#coffee, #beer {
+  padding: 0;
+  font-size: 12px;
+}
+
+h5 {
+  margin-top: 50px;
+}
+
+.green-status-bar {
+  color: #008000;
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-size: 1.1em;
+
+}
+
+.status strong {
+  font-size: 20px;
+}
+
+@keyframes blinker {
+    0% {  opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+/****************** EVENT ********************/
+
+.event .btn {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.turn-content {
+  margin-top: 20px;
+}
+
+
+/****************** WIN ********************/
+
+.kyle {
+  text-align: left;
+  padding: 0 40px 40px 40px;
+}
+
+/*.beer-button {
   margin-left: auto;
   margin-right: auto;
 }
@@ -13,69 +214,34 @@ body {
 .beer-mug {
   margin-left: auto;
   margin-right: -20%;
-}
+}*/
 
-.coffee-cup {
+/*.coffee-cup {
   margin-left: auto;
   margin-right: -10%;
-}
+}*/
 
-.main {
+/*.main {
   text-align: center;
   border: 5px solid white;
   margin-top: 5%;
   margin-bottom: 0%;
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.column-text {
-  margin: 20px;
-}
-
+}*/
 
 .logo {
-  text-align: center;
-  font-size: 7em;
-}
-
-a {
-  color: #FFFFFF;
-}
-
-.btn:hover,
-.form-btn:hover {
-  color: green;
-  border-color: green;
-}
-
-.btn {
-  border: 2px solid white;
-  font-size: 18px;
-  border-radius: 0px;
-}
-
-.btn-turn-event {
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 6em;
 }
 
 .btn-lg {
   font-size: 36px;
 }
 
-.btn-turn-event {
-  border: 2px solid white;
-  padding: 5px;
-  font-size: 1.5em;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 1%;
-  }
-
-#index-img-box {
-  float: center;
+.sm-main-imgs {
+  display: none;
 }
+
 
 .box {
   border: 2px solid white;
@@ -103,21 +269,6 @@ a {
   font-size: 2em;
 }
 
-.green-status-bar {
-  color: #008000;
-  animation-name: blinker;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  font-size: 1.1em;
-}
-
-@keyframes blinker {
-    0% {  opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
 h4 {
   line-height: 1.5;
 }
@@ -132,128 +283,9 @@ h3 {
   margin-bottom: 3px;
 }
 
-.header-block {
-  border-bottom: 5px solid white;
 
-}
-.stats-box {
-  border-right: 5px solid white;
-  float: left;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1em;
-  width: 100%;
-}
-
-
-@media screen and (max-width: 992px) {
-  .stats-box {
-    border-right: none;
-    border-bottom: 5px solid white;
-    text-align: center;
-  }
-}
-
-.status {
-  float: center;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: 3px solid white;
-  padding: 5px;
-}
-
-.header-block {
-  padding-top: 1px;
-}
-
-/*.turn-content {
-  margin-top:7%;
-}*/
-
-.turn-event {
-  font-size: 1em;
-}
-
-#beer-input {
-  margin-top: 3px;
-  margin-bottom:10px;
-}
-
-.crazy-maniacal-running {
-  width:100px;
-  height:200px;
-  margin: 10%;
-  animation-name: foo;
-  transform: translate3d(100px, 100px, 0px);
-  animation-iteration-count: infinite;
-  clear:
-}
-
-@keyframes foo {
-    0%   {left:0px; top:0px; transform: translate3d(50px, 40px, 0px);}
-    25%  {left:200px; top:0px; transform: translate3d(50px, 50px, 0px);}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
-}
-
-.bounceInLeft {
-  -webkit-animation: bounceInLeft 1s, bounce 2s, bounceOutRight 3s;
-  -webkit-animation-delay: 0s, 1.5s, 3s;
-}
-
-.cityscape {
-  width: 90%;
-}
-
-/*.coffee-button {
-  float: left;
-}
-
-
-.beer-button {
-  float: right;
-}*/
-
-.energy-level {
-  text-align: left;
-}
-.happiness-level,
-.money-level {
-  text-align: right;
-  width: 100%;
-}
-
-.about,
-.stats-box p  {
-  text-align: center;
-
-.map-button {
-  align: center;
-}
-.btn-small {
-  font-size: 14px;
-}
-
-.btn-big {
-  font-size: 14px;
-}
-
-.running-page {
-
-}
-
-.loser {
-  padding-bottom: 20px;
-}
-
-.win {
-  margin: 20px;
-}
-
-.btn-turn-event:hover {
-  color: yellow;
+.turn-event .col-md-8 {
+  margin-top: 1px;
 }
 
 .turn-content .positive-status {
@@ -262,11 +294,6 @@ h3 {
 
 .turn-content .negative-status {
   color: #ff0000;
-}
-
-
-#coffee {
-  text-align: center;
 }
 
 .positive-status {
@@ -278,6 +305,142 @@ h3 {
 }
 
 
-.back-button {
-  color: black;
+/**************** MEDIA QUERIES *******************/
+
+@media screen and (max-width: 992px) {
+  .stats-box {
+    border-right: none;
+  }
+
+  .turn .col-md-4,
+  .event .col-md-4 {
+    border-right: none;
+    border-bottom: 3px solid #fff;
+  }
+
+  .status strong {
+    font-size: 15px;
+  }
+
+  .turn .col-md-4,
+  .turn .col-md-8,
+  .event .col-md-8,
+  .event .col-md-4 {
+    min-height: 260px;
+  }
+
+  .stats,
+  .stat-labels {
+    padding: 0 130px;
+  }
+
+
+  /* map */
+  .col-md-offset-2 {
+    padding-left: 15%;
+  }
+
+  .img-center img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .status strong {
+    font-size: 14px;
+  }
+
+  .stats,
+  .stat-labels {
+    padding: 0 130px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .status strong {
+    font-size: 12px;
+  }
+
+  .stats,
+  .stat-labels {
+    padding: 0;
+  }
+
+  #beer, #coffee {
+    font-size: 10px;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  /**** general ****/
+  .about h1,
+  .intro h1,
+  .instructions h1 {
+    font-size: 1.5em;
+  }
+
+  .main-buttons .btn-lg,
+  .prologue-text h4 {
+    font-size: 12px;
+  }
+
+  .about h4,
+  .main-page h3,
+  .instructions h4 {
+    font-size: 1em;
+  }
+
+  .status strong {
+    font-size: 8px;
+  }
+
+
+  /**** main page ****/
+  .logo {
+    font-size: 3.5em;
+  }
+
+  .main-imgs {
+    display: none;
+  }
+
+  .sm-main-imgs {
+    display: block;
+  }
+
+  /**** about ****/
+  .about img {
+    width: 75%;
+  }
+
+  /**** intro ****/
+  .prologue-text,
+  .instructions-text {
+    width: 20em;
+  }
+
+  /**** new character ****/
+  .new-char .btn {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .new-char input {
+    line-height: 50px;
+    width: 350px;
+  }
+
+  /**** instructions ****/
+  .instructions .animated {
+    display: none;
+  }
+
+  /******* turns *******/
+  .stats,
+  .stat-labels {
+    padding: 0 40px;
+  }
 }

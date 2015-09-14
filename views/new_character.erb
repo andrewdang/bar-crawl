@@ -1,11 +1,13 @@
-<div class="col-md-8 main">
-  <div class="column-text">
+<div class="col-md-8">
+  <div class="index new-char">
     <h1>Who are you again?</h1>
     <br>
+
     <form id="new_character" action="/new_character" method="post">
-        <label id="name" class="form-label-text">Name:</label>
-        <input class="form-input-text" id="name" name="name" type="text">
-        <button type="submit" class="form-btn">Set</button>
+      <input class="form-input-text" id="name" name="name" type="text" placeholder="Enter Name...">
+      <button type="submit" class="btn">Set</button>
     </form>
+
+    <a href="/intro" class="btn">Back</a>
   </div>
 </div>
